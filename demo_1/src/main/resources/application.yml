@@ -1,0 +1,6 @@
+prop:
+  mails:
+    - a@a.com
+    - a@b.com
+    - a@c.com
+  notify: true

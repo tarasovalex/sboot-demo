@@ -1,0 +1,3 @@
+org.springframework.boot.env.EnvironmentPostProcessor = com.demo.spring.boot.demostarter.ProfilerResolverEPP
+org.springframework.context.ApplicationContextInitializer = com.demo.spring.boot.demostarter.ProfileStopperApplicationInitializer
+org.springframework.boot.autoconfigure.EnableAutoConfiguration = com.demo.spring.boot.demostarter.Conf
