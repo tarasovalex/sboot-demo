@@ -1,0 +1,28 @@
+# Spring properties
+spring:
+  application:
+     name: cloud-config-client  # Service registers under this name
+  freemarker:
+    enabled: false           # Ignore Eureka dashboard FreeMarker friendship-server
+  thymeleaf:
+    cache: false             # Allow Thymeleaf friendship-server to be reloaded at runtime
+    prefix: classpath:/posts-server/templates
+  cloud:
+    config:
+      uri:   http://localhost:1234
+
+# HTTP Server
+server:
+  port: 0   # HTTP (Tomcat) port
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+conf:
+  text: "hello from config!!"

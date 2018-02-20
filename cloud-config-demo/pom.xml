@@ -12,7 +12,9 @@
 	<description>Demo project for Spring Boot Cloud Configuratin</description>
 
 	<modules>
-		<module>cloude-config-server</module>
+		<module>cloud-config-server</module>
+		<module>cloud-config-client</module>
+		<module>cloud-discovery</module>
 	</modules>
 
 

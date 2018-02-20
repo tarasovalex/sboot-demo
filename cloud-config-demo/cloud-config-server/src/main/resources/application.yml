@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tarasovalex/sboot-demo
+          search-paths: configs
+  application:
+     name: cloud-config-server  # Service registers under this name
+server:
+  port: 1234
+
+management:
+  security:
+    enabled: false
