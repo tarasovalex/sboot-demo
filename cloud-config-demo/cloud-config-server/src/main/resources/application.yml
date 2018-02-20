@@ -1,5 +1,7 @@
 spring:
   cloud:
+    bus:
+      enabled: true
     config:
       server:
         git:
@@ -8,8 +10,47 @@ spring:
   application:
      name: cloud-config-server  # Service registers under this name
 server:
-  port: 1234
+  port: 8100
 
+management.context-path: /admin
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+
+---
+spring:
+  profiles: registration-first
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+    hostname: ${hostName}
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+    preferIpAddress: true
+    metadataMap:
+      instanceId: ${spring.application.name}:${server.port}
 management:
   security:
     enabled: false
+
+---
+spring:
+  profiles: config-monitor
+  cloud:
+    bus:
+      enabled: true
+  rabbitmq:
+    host:
+    port: 5672
+#    virtual-host:
+    username: guset
+    password: guest

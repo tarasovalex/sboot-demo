@@ -39,13 +39,27 @@
 		<dependency>
 			<!-- Eureka service registration -->
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-			<!--<version>1.2.4.RELEASE</version>-->
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.2.4.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-commons</artifactId>
-			<!--<version>1.2.4.RELEASE</version>-->
+			<version>1.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<!--Spring Cloud Bus-->
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-monitor</artifactId>
 		</dependency>
 
 		<dependency>
@@ -60,7 +74,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-parent</artifactId>
-				<version>Camden.SR7</version>
+				<version>Camden.SR3</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

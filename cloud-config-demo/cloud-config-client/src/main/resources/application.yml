@@ -9,7 +9,25 @@ spring:
     prefix: classpath:/posts-server/templates
   cloud:
     config:
-      uri:   http://localhost:1234
+      uri:   http://localhost:8100
+  rabbitmq:
+    host: localhost
+    port: 5672
+#    virtual-host:
+    username: guest
+    password: guest
+
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+  refresh:
+    enabled: true
+
 
 # HTTP Server
 server:
@@ -24,5 +42,6 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
-conf:
-  text: "hello from config!!"
+
+#conf:
+#  text: "hello from config!!"
