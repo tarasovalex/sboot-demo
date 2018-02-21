@@ -1,0 +1,7 @@
+turbine:
+  aggregator:
+    clusterConfig: CLOUD-CONFIG-CLIENT
+  appConfig: CLOUD-CONFIG-CLIENT
+
+logging:
+  level: INFO

@@ -2,19 +2,19 @@ spring:
   cloud:
     bus:
       enabled: true
-    config:
-      server:
-        native:
-          search-locations: file:///C:/projects/sboot-demo/configs/
     #config:
     #  server:
-    #    git:
-    #      uri: https://github.com/tarasovalex/sboot-demo
-    #      search-paths: configs
+    #    native:
+    #      search-locations: file:///C:/projects/sboot-demo/configs/
+    config:
+      server:
+        git:
+          uri: https://github.com/tarasovalex/sboot-demo
+          search-paths: configs
   application:
      name: cloud-config-server # Service registers under this name
-  profiles:
-    active: native
+#  profiles:
+#    active: native
 server:
   port: 8100
 

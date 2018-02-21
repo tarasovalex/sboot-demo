@@ -28,16 +28,19 @@ endpoints:
 # HTTP Server
 server:
   port: 0   # HTTP (Tomcat) port
-# Discovery Server Access
-#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
-#  2. Define URL of registration server (defaultZone)
-eureka:
-  instance:
-    instance-id: ${spring.application.name}:${random.int}
-  client:
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+
+hystrix:
+  command:
+    RemoteMessageClientCommand:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    RemoteMessageAnnotationClient:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 
 #conf:
 #  text: "hello from config!!"
