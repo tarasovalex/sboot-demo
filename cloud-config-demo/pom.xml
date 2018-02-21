@@ -15,7 +15,8 @@
 		<module>cloud-config-server</module>
 		<module>cloud-config-client</module>
 		<module>cloud-discovery</module>
-	</modules>
+		<module>cloud-monitoring</module>
+    </modules>
 
 
 </project>
