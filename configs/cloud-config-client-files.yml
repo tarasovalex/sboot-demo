@@ -1,2 +1,7 @@
+hystrix:
+  stream:
+    maxConcurrentConnections: 20
+    bus:
+      enabled: true
 conf:
   text: "hello from config FILESYSTEM update!!"
