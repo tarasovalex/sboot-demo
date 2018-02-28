@@ -10,7 +10,7 @@ public class ProfilerResolverEPP implements EnvironmentPostProcessor {
         if(configurableEnvironment.getActiveProfiles().length == 0) {
             if(System.getenv().get("OS").contains("Windows")) {
                 configurableEnvironment.addActiveProfile("DEV");
-                System.out.println("");
+                System.out.println("DEV");
             }
         }
     }

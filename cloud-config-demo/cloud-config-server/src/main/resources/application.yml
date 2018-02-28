@@ -3,20 +3,20 @@ spring:
     bus:
       enabled: true
 ### uncomment to filesyste, configuration
+    #onfig:
+    # server:
+    #   native:
+    #     search-locations: file:///D:/projects/alex/sboot/configs/
     config:
       server:
-        native:
-          search-locations: file:///D:/projects/alex/sboot/configs/
-    #config:
-    #  server:
-    #    git:
-    #      uri: https://github.com/tarasovalex/sboot-demo
-    #      search-paths: configs
+        git:
+          uri: https://github.com/tarasovalex/sboot-demo
+          search-paths: configs
   application:
      name: cloud-config-server # Service registers under this name
 ### uncomment to filesystem, configuration
-  profiles:
-    active: native
+  #profiles:
+  #  active: native
 server:
   port: 8100
 
