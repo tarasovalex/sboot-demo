@@ -2,4 +2,4 @@ server:
   port: 8090
 
 conf:
-  text: "hello from config GIT update 01 new !!"
+  text: "hello from config GIT update night new !!"
